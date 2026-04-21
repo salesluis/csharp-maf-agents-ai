@@ -9,7 +9,9 @@ public static class AgentFactory
     // ReSharper disable once InconsistentNaming
     private static readonly Dictionary<string, AgentCreator> _agents = new()
     {
-        ["weather"] = new WeatherAgent()
+        ["generic"] = new GenericAgent(),
+        ["weather"] = new WeatherAgent(),
+        ["translate"] = new TranslateAgent(),
     };
 
     public static ChatClientAgent? GetAgent(string agentName)
